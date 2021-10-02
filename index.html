@@ -30,15 +30,14 @@
     <script>
         let clock = document.getElementById('clock');
         let output = document.getElementById('output');
-        // let test = document.getElementById('test');
         let date = new Date();
         let hours = date.getHours();
         let mins = date.getMinutes();
         let day = date.getDay();
+        let dayDate = date.getDate();
         let month = date.getMonth();
 
         clock.innerHTML = hours + ':' + mins;
-        // test.innerHTML = date;
 
 
         switch(day) {
@@ -67,40 +66,40 @@
 
         switch(month) {
             case 0:
-                output.innerHTML += 'Jan' + ' ' + day;
+                output.innerHTML += 'Jan' + ' ' + dayDate;
                 break;
             case 1:
-                output.innerHTML += 'Feb' + ' ' + day;
+                output.innerHTML += 'Feb' + ' ' + dayDate;
                 break;
             case 2:
-                output.innerHTML += 'Mar' + ' ' + day;
+                output.innerHTML += 'Mar' + ' ' + dayDate;
                 break;
             case 3:
-                output.innerHTML += 'Apr' + ' ' + day;
+                output.innerHTML += 'Apr' + ' ' + dayDate;
                 break;
             case 4:
-                output.innerHTML += 'May' + ' ' + day;
+                output.innerHTML += 'May' + ' ' + dayDate;
                 break;
             case 5:
-                output.innerHTML += 'Jun' + ' ' + day;
+                output.innerHTML += 'Jun' + ' ' + dayDate;
                 break;
             case 6:
-                output.innerHTML += 'Jul' + ' ' + day;
+                output.innerHTML += 'Jul' + ' ' + dayDate;
                 break;
             case 7:
-                output.innerHTML += 'Aug' + ' ' + day;
+                output.innerHTML += 'Aug' + ' ' + dayDate;
                 break;
             case 8:
-                output.innerHTML += 'Sept' + ' ' + day;
+                output.innerHTML += 'Sept' + ' ' + dayDate;
                 break;
             case 9:
-                output.innerHTML += ' Oct' + ' ' + day;
+                output.innerHTML += ' Oct' + ' ' + dayDate;
                 break;
             case 10:
-                output.innerHTML += 'Nov' + ' ' + day;
+                output.innerHTML += 'Nov' + ' ' + dayDate;
                 break;
             case 11:
-                output.innerHTML += 'Dec' + ' ' + day;
+                output.innerHTML += 'Dec' + ' ' + dayDate;
                 break;
         };
 
