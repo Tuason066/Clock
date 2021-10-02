@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time and Date</title>
+
+    <style>
+        .container {
+            background-color: rgb(49, 78, 204);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            color: #fff;
+            padding: 1rem;
+            letter-spacing: 1px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="clock" id="clock"></h1>
+        <p class="output" id="output"></p>
+
+        <div id="test"></div>
+    </div>
+
+    <script>
+        let clock = document.getElementById('clock');
+        let output = document.getElementById('output');
+        // let test = document.getElementById('test');
+        let date = new Date();
+        let hours = date.getHours();
+        let mins = date.getMinutes();
+        let day = date.getDay();
+        let month = date.getMonth();
+
+        clock.innerHTML = hours + ':' + mins;
+        // test.innerHTML = date;
+
+
+        switch(day) {
+            case 1:
+                output.innerHTML = 'Mon,';
+                break;
+            case 2:
+                output.innerHTML = 'Tue,';
+                break;
+            case 3:
+                output.innerHTML = 'Wed,';
+                break;
+            case 4:
+                output.innerHTML = 'Thu,';
+                break;
+            case 5:
+                output.innerHTML = 'Fri,';
+                break;
+            case 6:
+                output.innerHTML = 'Sat,';
+                break;
+            case 0:
+                output.innerHTML = 'Sun,';
+                break;
+        };
+
+        switch(month) {
+            case 0:
+                output.innerHTML += 'Jan' + ' ' + day;
+                break;
+            case 1:
+                output.innerHTML += 'Feb' + ' ' + day;
+                break;
+            case 2:
+                output.innerHTML += 'Mar' + ' ' + day;
+                break;
+            case 3:
+                output.innerHTML += 'Apr' + ' ' + day;
+                break;
+            case 4:
+                output.innerHTML += 'May' + ' ' + day;
+                break;
+            case 5:
+                output.innerHTML += 'Jun' + ' ' + day;
+                break;
+            case 6:
+                output.innerHTML += 'Jul' + ' ' + day;
+                break;
+            case 7:
+                output.innerHTML += 'Aug' + ' ' + day;
+                break;
+            case 8:
+                output.innerHTML += 'Sept' + ' ' + day;
+                break;
+            case 9:
+                output.innerHTML += ' Oct' + ' ' + day;
+                break;
+            case 10:
+                output.innerHTML += 'Nov' + ' ' + day;
+                break;
+            case 11:
+                output.innerHTML += 'Dec' + ' ' + day;
+                break;
+        };
+
+    </script>
+
+</body>
+</html>
